@@ -1,7 +1,18 @@
 package lambda
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/aws/aws-lambda-go/lambda"
+)
 
-func hello(){
-	fmt.Println("hello World!")
+type Event struct {
+	Username string
+}
+
+func handler(e Event)(string, error){
+	return fmt.Sprintf("<h1>Hello %s from Lambda Go</h1>", e.Username), nil
+}
+
+func Lambda(){
+	lambda.Start(handler)
 }
