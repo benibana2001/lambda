@@ -5,7 +5,7 @@ install:
 		github.com/aws/aws-sdk-go
 
 run:
-	go run github.com/benibana2001/lambda/cmd/lambda
+	go run cmd/lambda/main.go
 
 build:
 	GOOS=linux GOARCH=amd64 go build -o \

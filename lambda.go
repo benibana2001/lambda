@@ -16,3 +16,7 @@ func handler(e Event)(string, error){
 func Lambda(){
 	lambda.Start(handler)
 }
+
+func Debug(){
+	fmt.Println("Hello World!")
+}
